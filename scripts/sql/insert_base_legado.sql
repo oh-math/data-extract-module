@@ -1,22 +1,38 @@
--- SCRIPT DE INSERÇÃO BASE LEGADO
+-- SCRIPT DE INSERÇÃO DA BASE LEGADA
+-- Este script insere dados simulando informações de sistemas antigos
 
-INSERT INTO PEDIDOS_LEGADO (
+-- Inserção de pedidos da base legada
+INSERT INTO pedidos_legado (
     id_pedido,
     codigo_cliente,
     email_cliente,
     dt_pedido,
     valor_total,
     status
-) VALUES
-(1, 'CLI001', 'cliente1@email.com', '2023-01-10', 150.90, 'P');
+) VALUES (
+    1,
+    'CLI001',
+    'cliente1@email.com',
+    '2023-01-10',
+    150.90,
+    'P'
+);
 
-INSERT INTO ENTREGAS_WMS (
+-- Inserção de dados de entrega vindos do WMS
+INSERT INTO entregas_wms (
     id_entrega,
-    pedido_ref,
+    referencia_do_pedido,
     cpf_destinatario,
     transportadora,
     dt_envio,
     dt_entrega,
     status_entrega
-) VALUES
-(10, 'CLI001', '123.456.789-00', 'Correios', '2023-01-11', '2023-01-15', 'ENTREGUE');
+) VALUES (
+    10,
+    'CLI001',
+    '12345678900',
+    'Correios',
+    '2023-01-11',
+    '2023-01-15',
+    'ENTREGUE'
+);
