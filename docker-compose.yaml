@@ -1,0 +1,13 @@
+services:
+  database:
+    image: mysql:latest
+    container_name: legacy-mysql
+    restart: always
+    env_file:
+      - .env
+    volumes:
+      - database:/data/mysql
+    ports:
+      - '3306:3306'
+volumes:
+  database:
